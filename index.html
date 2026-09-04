@@ -8,69 +8,63 @@
 <meta name="description" content="Step by step instructions for changing buttons, labels, pages and links in the SAFE@MacEwan safety app.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
 :root{
-  --ground:#F3F6F8;
+  --ground:#F7F4F4;
   --surface:#FFFFFF;
-  --surface-2:#E7EEF3;
-  --ink:#111A22;
-  --ink-2:#4A5966;
-  --ink-3:#74838F;
-  --rule:#D5DDE4;
-  --rule-strong:#B3BFCA;
-  --navy:#0F4468;
-  --navy-soft:#E3EDF5;
-  --amber:#8A5700;
-  --amber-bg:#FBF1DD;
-  --amber-line:#D69F35;
-  --green:#1C6747;
-  --green-bg:#E4F2EB;
-  --red:#9A2015;
-  --red-bg:#F9EAE8;
-  --shadow:0 1px 2px rgba(17,26,34,.05), 0 8px 24px rgba(17,26,34,.06);
+  --surface-2:#F0E9EA;
+  --ink:#1A1113;
+  --ink-2:#584B4E;
+  --ink-3:#7E7073;
+  --rule:#E1D6D8;
+  --rule-strong:#C4B4B7;
+  --maroon:#8B2331;
+  --maroon-deep:#6E1B27;
+  --maroon-soft:#F6EBEC;
+  --gold:#7A5C14;
+  --gold-bg:#F7EFDA;
+  --gold-line:#C9A94E;
+  --band-text:#FFFFFF;
+  --shadow:0 1px 2px rgba(26,17,19,.05), 0 8px 24px rgba(26,17,19,.05);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#0F141A;
-    --surface:#161D24;
-    --surface-2:#1E2831;
-    --ink:#E5EBF1;
-    --ink-2:#AAB8C4;
-    --ink-3:#8291A0;
-    --rule:#28323C;
-    --rule-strong:#3B4855;
-    --navy:#7EB4DE;
-    --navy-soft:#142838;
-    --amber:#EFAE4E;
-    --amber-bg:#2A2013;
-    --amber-line:#87621F;
-    --green:#6AC69A;
-    --green-bg:#12281F;
-    --red:#EE8478;
-    --red-bg:#2C1613;
-    --shadow:0 1px 2px rgba(0,0,0,.45), 0 8px 24px rgba(0,0,0,.3);
+    --ground:#141011;
+    --surface:#1C1618;
+    --surface-2:#251D1F;
+    --ink:#EDE6E7;
+    --ink-2:#B6A8AB;
+    --ink-3:#8F8083;
+    --rule:#332A2C;
+    --rule-strong:#4A3D40;
+    --maroon:#E8949F;
+    --maroon-deep:#7A1E2B;
+    --maroon-soft:#2A1519;
+    --gold:#DDBA63;
+    --gold-bg:#2A2213;
+    --gold-line:#7E6526;
+    --band-text:#FFFFFF;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.3);
   }
 }
 :root[data-theme="dark"]{
-  --ground:#0F141A;
-  --surface:#161D24;
-  --surface-2:#1E2831;
-  --ink:#E5EBF1;
-  --ink-2:#AAB8C4;
-  --ink-3:#8291A0;
-  --rule:#28323C;
-  --rule-strong:#3B4855;
-  --navy:#7EB4DE;
-  --navy-soft:#142838;
-  --amber:#EFAE4E;
-  --amber-bg:#2A2013;
-  --amber-line:#87621F;
-  --green:#6AC69A;
-  --green-bg:#12281F;
-  --red:#EE8478;
-  --red-bg:#2C1613;
-  --shadow:0 1px 2px rgba(0,0,0,.45), 0 8px 24px rgba(0,0,0,.3);
+  --ground:#141011;
+  --surface:#1C1618;
+  --surface-2:#251D1F;
+  --ink:#EDE6E7;
+  --ink-2:#B6A8AB;
+  --ink-3:#8F8083;
+  --rule:#332A2C;
+  --rule-strong:#4A3D40;
+  --maroon:#E8949F;
+  --maroon-deep:#7A1E2B;
+  --maroon-soft:#2A1519;
+  --gold:#DDBA63;
+  --gold-bg:#2A2213;
+  --gold-line:#7E6526;
+  --band-text:#FFFFFF;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.3);
 }
 
 *{box-sizing:border-box}
@@ -79,37 +73,36 @@ body{
   margin:0;
   background:var(--ground);
   color:var(--ink);
-  font-family:"IBM Plex Serif", Georgia, "Times New Roman", serif;
-  font-size:16px;
-  line-height:1.62;
+  font-family:"Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size:17px;
+  line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
 
 /* ---------- masthead ---------- */
-.masthead{
-  background:var(--surface);
-  border-bottom:1px solid var(--rule);
-}
-.masthead .inner{max-width:940px; margin:0 auto; padding:44px 24px 34px}
+.masthead{background:var(--maroon-deep); color:var(--band-text)}
+.masthead .inner{max-width:940px; margin:0 auto; padding:46px 24px 40px}
 .eyebrow{
   font-family:"IBM Plex Mono", ui-monospace, monospace;
-  font-size:.7rem; letter-spacing:.15em; text-transform:uppercase;
-  color:var(--navy); margin:0 0 14px;
+  font-size:.7rem; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(255,255,255,.72); margin:0 0 16px;
 }
 h1{
   font-family:Archivo, "Helvetica Neue", Arial, sans-serif;
-  font-weight:700; font-size:clamp(2.1rem, 5.2vw, 3.1rem);
-  line-height:1.02; letter-spacing:-.028em; margin:0 0 14px;
-  text-wrap:balance; max-width:16ch;
+  font-weight:700; font-size:clamp(2.1rem, 5.2vw, 3.05rem);
+  line-height:1.03; letter-spacing:-.028em; margin:0 0 14px;
+  text-wrap:balance; max-width:17ch; color:var(--band-text);
 }
-.standfirst{font-size:1.08rem; color:var(--ink-2); max-width:58ch; margin:0}
+.standfirst{
+  font-size:1.06rem; color:rgba(255,255,255,.86);
+  max-width:56ch; margin:0;
+}
 
 /* ---------- tab bar ---------- */
 .tabbar{
   position:sticky; top:0; z-index:20;
   background:var(--ground);
   border-bottom:1px solid var(--rule);
-  box-shadow:0 1px 0 var(--rule);
 }
 .tabbar .inner{
   max-width:940px; margin:0 auto; padding:12px 24px;
@@ -117,7 +110,6 @@ h1{
 }
 .tab{
   font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:.83rem;
-  letter-spacing:-.005em;
   color:var(--ink-2); background:var(--surface);
   border:1px solid var(--rule); border-radius:100px;
   padding:7px 15px; cursor:pointer; line-height:1.3;
@@ -125,28 +117,26 @@ h1{
 }
 .tab:hover{border-color:var(--rule-strong); color:var(--ink)}
 .tab[aria-selected="true"]{
-  background:var(--navy); border-color:var(--navy);
-  color:var(--surface);
+  background:var(--maroon-deep); border-color:var(--maroon-deep);
+  color:var(--band-text);
 }
-:root[data-theme="dark"] .tab[aria-selected="true"],
-:root:not([data-theme="light"]) .tab[aria-selected="true"]{color:var(--ground)}
-.tab:focus-visible{outline:2px solid var(--amber-line); outline-offset:2px}
+.tab:focus-visible{outline:2px solid var(--maroon); outline-offset:2px}
 
 /* ---------- panels ---------- */
 main{max-width:940px; margin:0 auto; padding:46px 24px 110px}
-.panel{animation:none}
 .panel > .lead{
-  font-size:1.06rem; color:var(--ink-2); max-width:62ch; margin:0 0 30px;
+  font-size:1.06rem; color:var(--ink-2); max-width:62ch; margin:0 0 32px;
 }
 h2{
   font-family:Archivo, Arial, sans-serif; font-weight:700;
-  font-size:clamp(1.55rem, 3.6vw, 2.05rem); letter-spacing:-.022em;
+  font-size:clamp(1.6rem, 3.6vw, 2.1rem); letter-spacing:-.024em;
   line-height:1.12; margin:0 0 10px; text-wrap:balance;
+  color:var(--maroon);
 }
 h3{
-  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:1.1rem;
-  letter-spacing:-.008em; margin:36px 0 12px;
-  padding-bottom:8px; border-bottom:1px solid var(--rule);
+  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:1.12rem;
+  letter-spacing:-.008em; margin:38px 0 14px; color:var(--ink);
+  padding-bottom:8px; border-bottom:2px solid var(--maroon);
 }
 h3:first-of-type{margin-top:0}
 p{max-width:64ch; margin:0 0 14px}
@@ -155,81 +145,76 @@ p{max-width:64ch; margin:0 0 14px}
 
 code, .ui{
   font-family:"IBM Plex Mono", ui-monospace, monospace;
-  font-size:.85em; background:var(--surface-2); color:var(--ink);
-  padding:1.5px 6px; border-radius:3px;
+  font-size:.84em; background:var(--surface-2); color:var(--ink);
+  padding:2px 6px; border-radius:3px;
 }
-.ui{color:var(--navy); font-weight:500; white-space:nowrap}
+.ui{color:var(--maroon); font-weight:500; white-space:nowrap}
 .fill{
-  font-family:"IBM Plex Mono", monospace; font-size:.82em;
-  color:var(--amber); background:var(--amber-bg);
-  border-bottom:1px dashed var(--amber-line);
-  padding:1.5px 6px; border-radius:3px;
+  font-family:"IBM Plex Mono", monospace; font-size:.8em;
+  color:var(--gold); background:var(--gold-bg);
+  border-bottom:1px dashed var(--gold-line);
+  padding:2px 6px; border-radius:3px;
 }
 
 /* ---------- steps ---------- */
 ol.steps{list-style:none; counter-reset:s; margin:0 0 8px; padding:0}
 ol.steps > li{
   counter-increment:s; position:relative;
-  padding:0 0 20px 46px; max-width:66ch; font-size:1rem;
+  padding:0 0 22px 48px; max-width:66ch;
 }
 ol.steps > li::before{
   content:counter(s);
-  position:absolute; left:0; top:-2px;
-  width:30px; height:30px; border-radius:50%;
-  background:var(--surface); color:var(--navy);
-  border:1.5px solid var(--navy);
-  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:.88rem;
+  position:absolute; left:0; top:-1px;
+  width:31px; height:31px; border-radius:50%;
+  background:var(--maroon-deep); color:var(--band-text);
+  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:.9rem;
   display:flex; align-items:center; justify-content:center;
 }
 ol.steps > li::after{
-  content:""; position:absolute; left:15px; top:32px; bottom:2px; width:1.5px;
+  content:""; position:absolute; left:15px; top:34px; bottom:2px; width:1.5px;
   background:var(--rule);
 }
 ol.steps > li:last-child::after{display:none}
-ol.steps > li strong{font-family:Archivo, Arial, sans-serif; font-weight:600}
-ol.steps ul{margin:8px 0 0; padding-left:18px}
+ol.steps > li strong{font-weight:600}
+ol.steps ul{margin:9px 0 0; padding-left:18px}
 
-/* ---------- callouts ---------- */
+/* ---------- note ---------- */
 .note{
-  border:1px solid var(--rule); border-left-width:3px;
+  background:var(--maroon-soft); border:1px solid var(--rule);
+  border-left:3px solid var(--maroon-deep);
   padding:15px 18px; margin:22px 0; border-radius:0 4px 4px 0;
-  font-size:.95rem; max-width:64ch; background:var(--surface);
+  font-size:.96rem; max-width:64ch;
 }
 .note p{margin:0; max-width:none}
 .note p + p{margin-top:9px}
 .note .tag{
   display:block; font-family:"IBM Plex Mono", monospace;
   font-size:.66rem; letter-spacing:.13em; text-transform:uppercase;
-  margin-bottom:6px; font-weight:500;
+  margin-bottom:6px; font-weight:500; color:var(--maroon);
 }
-.note.verify{background:var(--amber-bg); border-color:var(--amber-line)}
-.note.verify .tag{color:var(--amber)}
-.note.rule{background:var(--navy-soft); border-color:var(--navy)}
-.note.rule .tag{color:var(--navy)}
-.note.stop{background:var(--red-bg); border-color:var(--red)}
-.note.stop .tag{color:var(--red)}
-.note.ok{background:var(--green-bg); border-color:var(--green)}
-.note.ok .tag{color:var(--green)}
+.note.gold{background:var(--gold-bg); border-color:var(--gold-line); border-left-color:var(--gold-line)}
+.note.gold .tag{color:var(--gold)}
 
 /* ---------- screen map ---------- */
 .zones{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
   gap:14px; margin:0 0 22px;
 }
 .zone{
   background:var(--surface); border:1px solid var(--rule);
-  border-top:3px solid var(--navy); padding:16px 18px; border-radius:0 0 4px 4px;
+  border-top:3px solid var(--maroon-deep); padding:16px 18px;
+  border-radius:0 0 4px 4px;
 }
 .zone h4{
-  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:.98rem;
+  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:1rem;
   margin:0 0 3px;
 }
 .zone .where{
   font-family:"IBM Plex Mono", monospace; font-size:.66rem;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3);
+  letter-spacing:.11em; text-transform:uppercase; color:var(--ink-3);
   margin:0 0 8px;
 }
-.zone p{font-size:.9rem; color:var(--ink-2); margin:0; max-width:none}
+.zone p{font-size:.92rem; color:var(--ink-2); margin:0; max-width:none}
 
 /* ---------- app tree ---------- */
 .treewrap{
@@ -237,49 +222,49 @@ ol.steps ul{margin:8px 0 0; padding-left:18px}
   border:1px solid var(--rule); border-radius:4px; margin:0 0 10px;
 }
 pre.tree{
-  font-family:"IBM Plex Mono", monospace; font-size:.8rem; line-height:1.8;
+  font-family:"IBM Plex Mono", monospace; font-size:.79rem; line-height:1.8;
   margin:0; padding:20px 22px; color:var(--ink-2); white-space:pre;
 }
 pre.tree b{color:var(--ink); font-weight:500}
-pre.tree i{color:var(--navy); font-style:normal}
-.caption{font-size:.85rem; color:var(--ink-3); max-width:64ch; margin:0 0 8px}
+pre.tree i{color:var(--maroon); font-style:normal}
+.caption{font-size:.88rem; color:var(--ink-3); max-width:64ch; margin:0 0 8px}
 
 /* ---------- tables ---------- */
 .tablewrap{
   overflow-x:auto; margin:0 0 20px;
   border:1px solid var(--rule); border-radius:4px; background:var(--surface);
 }
-table{border-collapse:collapse; width:100%; min-width:560px; font-size:.92rem}
+table{border-collapse:collapse; width:100%; min-width:560px; font-size:.94rem}
 th, td{text-align:left; padding:12px 15px; border-bottom:1px solid var(--rule); vertical-align:top}
 thead th{
   font-family:"IBM Plex Mono", monospace; font-size:.66rem; letter-spacing:.11em;
-  text-transform:uppercase; color:var(--ink-3); font-weight:500;
-  background:var(--surface-2);
+  text-transform:uppercase; color:var(--band-text); font-weight:500;
+  background:var(--maroon-deep); border-bottom:none;
 }
 tbody tr:last-child td{border-bottom:none}
 td:first-child{font-family:Archivo, Arial, sans-serif; font-weight:600}
 
 /* ---------- checklist ---------- */
 ul.check{list-style:none; padding:0; margin:0 0 18px; max-width:64ch}
-ul.check li{position:relative; padding:0 0 0 32px; margin-bottom:11px; font-size:1rem}
+ul.check li{position:relative; padding:0 0 0 32px; margin-bottom:11px}
 ul.check li::before{
-  content:""; position:absolute; left:0; top:4px;
+  content:""; position:absolute; left:0; top:5px;
   width:16px; height:16px; border:1.5px solid var(--rule-strong);
   border-radius:3px; background:var(--surface);
 }
 
-/* ---------- next / prev ---------- */
+/* ---------- pager ---------- */
 .pager{
   display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
-  margin-top:44px; padding-top:22px; border-top:1px solid var(--rule);
+  margin-top:48px; padding-top:22px; border-top:1px solid var(--rule);
 }
 .pager button{
-  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:.86rem;
-  background:none; border:none; color:var(--navy); cursor:pointer;
+  font-family:Archivo, Arial, sans-serif; font-weight:600; font-size:.88rem;
+  background:none; border:none; color:var(--maroon); cursor:pointer;
   padding:8px 2px; text-align:left;
 }
 .pager button:hover{text-decoration:underline}
-.pager button:focus-visible{outline:2px solid var(--navy); outline-offset:3px}
+.pager button:focus-visible{outline:2px solid var(--maroon); outline-offset:3px}
 .pager button[hidden]{display:none}
 .pager .dir{
   display:block; font-family:"IBM Plex Mono", monospace; font-weight:400;
@@ -288,12 +273,10 @@ ul.check li::before{
 }
 .pager .next{text-align:right}
 
-footer{
-  border-top:1px solid var(--rule); background:var(--surface);
-}
+footer{border-top:1px solid var(--rule); background:var(--surface)}
 footer .inner{
-  max-width:940px; margin:0 auto; padding:26px 24px 40px;
-  font-size:.83rem; color:var(--ink-3); max-width:940px;
+  max-width:940px; margin:0 auto; padding:26px 24px 44px;
+  font-size:.86rem; color:var(--ink-3);
 }
 footer p{max-width:70ch; margin:0 0 8px}
 
@@ -302,7 +285,9 @@ footer p{max-width:70ch; margin:0 0 8px}
   .tabbar, .pager{display:none}
   .panel[hidden]{display:block !important; break-before:page}
   main{max-width:none; padding:0}
+  .masthead{background:#fff; color:#000}
   .masthead .inner{padding:0 0 18pt}
+  h1, .standfirst, .eyebrow{color:#000}
   .note, .tablewrap, ol.steps > li, .treewrap{break-inside:avoid}
 }
 @media (prefers-reduced-motion:reduce){
@@ -317,7 +302,7 @@ footer p{max-width:70ch; margin:0 0 8px}
   <div class="inner">
     <p class="eyebrow">SAFE@MacEwan &middot; Editing Guide</p>
     <h1>How to change things in the safety app</h1>
-    <p class="standfirst">Plain step by step instructions for adding buttons, labels, pages, phone numbers, emails and links. No coding, and nothing goes through the App Store.</p>
+    <p class="standfirst">Step by step instructions for adding buttons, labels, pages, phone numbers, emails and links. No coding, and nothing goes through the App Store.</p>
   </div>
 </header>
 
@@ -343,12 +328,12 @@ footer p{max-width:70ch; margin:0 0 8px}
 <!-- ============ START HERE ============ -->
 <section class="panel" id="p-start" role="tabpanel" aria-labelledby="t-start" tabindex="-1">
   <h2>Start here</h2>
-  <p class="lead">Five minutes of reading that makes every other section obvious.</p>
+  <p class="lead">What the editing screen is, and how the app is put together.</p>
 
   <h3>Getting in</h3>
   <ol class="steps">
-    <li>On a <strong>computer</strong>, not a phone, go to <code>macewan.apparmor.com</code>. The editing screen puts a live phone preview beside your work, and that needs a wide screen.</li>
-    <li>Click <span class="ui">Sign in with MacEwan Credentials</span>, or use the username and password your app administrator gave you. Forgotten it? Use <span class="ui">Forgot Password?</span> on the same screen.</li>
+    <li>On a computer, go to <code>macewan.apparmor.com</code>. The editing screen puts a live phone preview beside your work, so it needs a wide screen.</li>
+    <li>Click <span class="ui">Sign in with MacEwan Credentials</span>, or use the username and password from your app administrator. There is a <span class="ui">Forgot Password?</span> link on the same screen.</li>
     <li>Open the <span class="ui">Content Management</span> tab, then click <span class="ui">Designer</span>. That is where every instruction on this site takes place.</li>
   </ol>
 
@@ -362,7 +347,7 @@ footer p{max-width:70ch; margin:0 0 8px}
     <div class="zone">
       <h4>Properties</h4>
       <p class="where">Middle</p>
-      <p>The settings for whichever button you clicked: its wording, what it does, its icon, whether people can see it.</p>
+      <p>The settings for whichever button you clicked: its wording, what it does, its icon, whether it is visible.</p>
     </div>
     <div class="zone">
       <h4>App preview</h4>
@@ -371,19 +356,19 @@ footer p{max-width:70ch; margin:0 0 8px}
     </div>
   </div>
 
-  <h3>Two habits that save you</h3>
-  <div class="note rule">
-    <span class="tag">Save constantly</span>
-    <p>Click <span class="ui">Save Properties</span> after every single thing you change. It does not save on its own. Click away from a button without saving and whatever you typed is gone.</p>
+  <h3>Saving and publishing</h3>
+  <div class="note">
+    <span class="tag">Save Properties</span>
+    <p>Nothing saves on its own. Click <span class="ui">Save Properties</span> after each thing you change. Clicking away from a button before saving loses what you typed.</p>
   </div>
-  <div class="note rule">
-    <span class="tag">Build in draft</span>
-    <p>Use <span class="ui">Draft Mode</span> while you work, and publish when it is finished. Published changes reach people's phones within seconds, so there is no quiet moment to leave something half built. Someone could open the app thirty seconds after you save.</p>
+  <div class="note">
+    <span class="tag">Draft Mode</span>
+    <p><span class="ui">Draft Mode</span> holds your changes back so they are not visible in the app yet. Publishing releases them. Published changes reach phones in real time, with no App Store submission and no waiting on IT.</p>
   </div>
 
   <h3>How the app is put together</h3>
-  <p>The app is a <strong>tree of buttons</strong>. The home screen is a list of buttons. Tapping one either opens another list of buttons, or does one specific thing. That is the whole structure.</p>
-  <p>Which means every job on this site is really the same job: find the right spot in the tree, add or change a button, tell it what to do, save, publish, test.</p>
+  <p>The app is a tree of buttons. The home screen is a list of buttons. Tapping one either opens another list of buttons, or does one specific thing.</p>
+  <p>Every job on this site is the same job: find the right spot in the tree, add or change a button, tell it what to do, save, publish, test.</p>
 
   <div class="treewrap">
 <pre class="tree">HOME
@@ -408,19 +393,14 @@ footer p{max-width:70ch; margin:0 0 8px}
  +-- <b>Friend Walk</b>                  <i>[opens a built-in feature]</i>
  +-- <b>Work Alone Check In</b>          <i>[opens a built-in feature]</i></pre>
   </div>
-  <p class="caption">An example. Yours will look different. The shape is the point: lists inside lists, with something that actually happens at the end of each branch.</p>
-
-  <div class="note ok">
-    <span class="tag">Keep in mind</span>
-    <p>Nobody in an emergency scrolls and hunts. Anything life-safety critical belongs on the home screen or one tap below it. Every level you add pushes something further away from someone who needs it.</p>
-  </div>
+  <p class="caption">An example of the shape: lists inside lists, with something that happens at the end of each branch.</p>
 
   <h3>The five things a button can do</h3>
   <div class="tablewrap">
     <table>
-      <thead><tr><th>You want</th><th>Pick the option that</th><th>Instructions</th></tr></thead>
+      <thead><tr><th>You want</th><th>Pick the option that</th><th>Instructions are under</th></tr></thead>
       <tbody>
-        <tr><td>A list of more buttons</td><td>opens a submenu or folder</td><td>Add a button</td></tr>
+        <tr><td>A list of more buttons</td><td>opens a submenu or folder</td><td>Link inside the app</td></tr>
         <tr><td>A page of information</td><td>opens a content page</td><td>Add a page</td></tr>
         <tr><td>To dial a number</td><td>places a call</td><td>Add a phone number</td></tr>
         <tr><td>To start an email</td><td>sends an email</td><td>Add an email</td></tr>
@@ -428,30 +408,24 @@ footer p{max-width:70ch; margin:0 0 8px}
       </tbody>
     </table>
   </div>
-  <p>On top of these, AppArmor supplies <strong>built-in features</strong>: Mobile BlueLight, Friend Walk, Work Alone check in, tip and incident reporting, campus maps, chat and directory. You do not build those. You switch them on and put a button in front of them.</p>
+  <p>Alongside these, AppArmor supplies built-in features: Mobile BlueLight, Friend Walk, Work Alone check in, tip and incident reporting, campus maps, chat and directory. You do not build those. You switch them on and put a button in front of them.</p>
 
-  <div class="note verify">
-    <span class="tag">One honest note</span>
-    <p>Where these pages describe the exact wording on screen, it is marked like <span class="fill">check the wording</span>. AppArmor does not publish their dropdown names anywhere public, so those few labels may read slightly differently in your dashboard. What each option <em>does</em> is right, so pick by meaning. Once you have seen the real wording, tell whoever maintains this page and it will be corrected.</p>
-  </div>
-
-  <div class="note stop">
-    <span class="tag">Never</span>
-    <p>Do not edit app content during a live incident. Content changes are permanent and easy to get wrong under pressure. Push notifications are the tool for live incidents. Editing waits until stand-down.</p>
+  <div class="note gold">
+    <span class="tag">About the wording on screen</span>
+    <p>Where these pages name an option in the Designer, it is marked like <span class="fill">check the wording</span>. AppArmor does not publish their dropdown names, so those few labels may read slightly differently in your dashboard. What each option does is correct, so pick by meaning.</p>
   </div>
 </section>
 
 <!-- ============ ADD A BUTTON ============ -->
 <section class="panel" id="p-button" role="tabpanel" aria-labelledby="t-button" tabindex="-1" hidden>
   <h2>How to add a button</h2>
-  <p class="lead">The one you will use most. Everything else on this site is a variation of it.</p>
+  <p class="lead">The one you will use most. Everything else here is a variation of it.</p>
 
   <ol class="steps">
-    <li><strong>Decide where it goes before you open anything.</strong> Which existing list should it sit in? How many taps from the home screen? Anything life-safety belongs at home or one level down.</li>
-    <li>In the <span class="ui">Designer</span>, click that list in the menu tree on the left. To put the button on the home screen, click the very top level.</li>
+    <li>In the <span class="ui">Designer</span>, click the list you want the button to sit inside, using the menu tree on the left. New buttons are added inside whatever is selected, so select the parent first. To put a button on the home screen, click the very top level.</li>
     <li>Click the control that adds a new item <span class="fill">check the wording</span>. A new blank button appears in the tree.</li>
-    <li><strong>Type the wording</strong> people will see on the button. Three words if you can manage it. See the Add a label section for how to word it well.</li>
-    <li><strong>Choose what the button does</strong> from the dropdown. Five choices, and each one has its own section on this site:
+    <li>Type the wording people will see on the button.</li>
+    <li>Choose what the button does from the dropdown. There are five choices, each with its own section on this site:
       <ul>
         <li>opens a list of more buttons</li>
         <li>opens a page of information</li>
@@ -460,290 +434,223 @@ footer p{max-width:70ch; margin:0 0 8px}
         <li>opens a web page</li>
       </ul>
     </li>
-    <li><strong>Fill in the matching box.</strong> The number, the email address, the web address, or the page content.</li>
-    <li>Pick an icon if the Properties panel offers one, and make sure the button is set to visible.</li>
+    <li>Fill in the matching box: the number, the email address, the web address, or the page content.</li>
+    <li>Pick an icon if the Properties panel offers one, and check that the button is set to visible.</li>
     <li>Click <span class="ui">Save Properties</span>.</li>
-    <li>Look at the app preview on the right. Is the wording cut off? Is the button where you expected? Drag it into position if not.</li>
-    <li>Publish it, then test it on a real phone. Both of those are in the Publish and test section.</li>
+    <li>Look at the app preview on the right to check the wording is not cut off and the button is where you expected. Drag it into position if not.</li>
+    <li>Publish it, then test it on a phone. Both are under Publish and test.</li>
   </ol>
-
-  <div class="note ok">
-    <span class="tag">Tip</span>
-    <p>If you are adding several related buttons, add the list button first, save it, then add the buttons underneath it. Building top down keeps the tree tidy and stops things landing at the wrong level.</p>
-  </div>
 </section>
 
 <!-- ============ ADD A LABEL ============ -->
 <section class="panel" id="p-label" role="tabpanel" aria-labelledby="t-label" tabindex="-1" hidden>
   <h2>How to add a label</h2>
-  <p class="lead">The wording on a button, and the headings inside a page. Small thing, big difference.</p>
+  <p class="lead">The wording on a button, and headings inside a page.</p>
 
   <h3>The wording on a button</h3>
   <ol class="steps">
     <li>In the menu tree, click the button you want to name or rename.</li>
     <li>In the Properties panel, find the box that holds the button's wording <span class="fill">check the wording</span>.</li>
-    <li>Type the new label.</li>
+    <li>Type the label.</li>
     <li>Click <span class="ui">Save Properties</span>.</li>
-    <li>Check the app preview. The label must fit on one line without being cut off. Older and smaller phones cut off sooner than the preview does, so if it only just fits, shorten it.</li>
+    <li>Check the app preview. Labels that do not fit on one line are cut off, and smaller phones cut off sooner than the preview does.</li>
     <li>Publish and test.</li>
   </ol>
 
   <h3>A heading inside a page</h3>
   <ol class="steps">
-    <li>Click the button whose page you want to add a heading to.</li>
+    <li>Click the button whose page you are adding a heading to.</li>
     <li>In the content editor, put your cursor where the heading goes and type it.</li>
     <li>Select the text you just typed, then choose a heading style from the editor's formatting menu.</li>
-    <li>Do not fake a heading by making text bold and big. A real heading style is what lets a screen reader announce it as a heading, which matters for anyone using the app with assistive technology.</li>
-    <li>Click <span class="ui">Save Properties</span>, then read the page in the preview at phone width.</li>
+    <li>Use the heading style rather than making text bold and large. The heading style is what lets a screen reader announce it as a heading.</li>
+    <li>Click <span class="ui">Save Properties</span>, then check the page in the preview.</li>
+    <li>Publish and test.</li>
   </ol>
-
-  <h3>How to word a label well</h3>
-  <ul>
-    <li><strong>Start with the verb.</strong> <code>Call Security Services</code>, not <code>Security Services Contact Information</code>.</li>
-    <li><strong>Three words where possible</strong>, five at the absolute most.</li>
-    <li><strong>Say what happens when it is tapped.</strong> Nobody should be surprised by where a button takes them.</li>
-    <li><strong>No internal names or acronyms.</strong> Use the words a student would use, not the words on your org chart.</li>
-    <li><strong>Sentence case, not CAPITALS.</strong> Capitals read slower, and they shout at someone who is already stressed.</li>
-  </ul>
-
-  <div class="tablewrap">
-    <table>
-      <thead><tr><th>Instead of</th><th>Write</th><th>Why</th></tr></thead>
-      <tbody>
-        <tr><td>Security</td><td>Call Security Services</td><td>Says what tapping actually does</td></tr>
-        <tr><td>EMERGENCY PROCEDURES</td><td>Emergency Procedures</td><td>Faster to read</td></tr>
-        <tr><td>SAMU Referral Form</td><td>Report a Concern</td><td>No internal acronyms</td></tr>
-        <tr><td>Information About Reporting an Incident on Campus</td><td>Report an Incident</td><td>Fits on the screen</td></tr>
-      </tbody>
-    </table>
-  </div>
 </section>
 
 <!-- ============ ADD A PAGE ============ -->
 <section class="panel" id="p-page" role="tabpanel" aria-labelledby="t-page" tabindex="-1" hidden>
   <h2>How to add a page</h2>
-  <p class="lead">A page of information: a procedure, a checklist, a set of instructions.</p>
+  <p class="lead">A page of information inside the app.</p>
 
   <ol class="steps">
-    <li>Add a button in the right list, following the Add a button steps.</li>
-    <li>Choose the option that <strong>opens a page of content</strong> <span class="fill">check the wording</span>.</li>
+    <li>Add a button in the list where you want it, following the Add a button steps.</li>
+    <li>Choose the option that opens a page of content <span class="fill">check the wording</span>.</li>
     <li>Open the content editor in the Properties panel. It works like a simplified Word: bold, bullets, headings, images and video.</li>
-    <li><strong>Put the action first.</strong> Do not open with background, policy or who owns the procedure. Open with what to do right now. Background goes at the bottom, if at all.</li>
-    <li>Write in short numbered steps. One instruction per step.</li>
-    <li>If you are copying from Word, <strong>paste as plain text</strong> and then apply formatting inside the editor. Pasting straight from Word drags in hidden styling that breaks the layout on phones.</li>
-    <li>Add a short <code>Reviewed: Month Year</code> line at the bottom, so anyone reading can see it is current.</li>
+    <li>Type or paste your content. If you are copying from Word, paste as plain text and then apply the formatting inside the editor. Pasting straight from Word brings hidden styling with it, which changes how the page lays out on a phone.</li>
     <li>Click <span class="ui">Save Properties</span>.</li>
-    <li>Read the whole page in the app preview at phone width. A paragraph that looks fine on a laptop becomes a wall of text on a phone.</li>
+    <li>Read the page in the app preview at phone width.</li>
     <li>Publish and test.</li>
   </ol>
 
-  <div class="note ok">
-    <span class="tag">Why this matters</span>
-    <p>Content pages are the part of the app that works with no signal. If information has to be reachable when the network is down, it lives on a page like this, never behind a web link.</p>
-  </div>
-
-  <div class="note stop">
-    <span class="tag">Never</span>
-    <p>Never keep two copies of the same procedure in different spots. They fall out of step, and one day someone reads the wrong one. One page, one source of truth. If you need it reachable from two places, use the Link inside the app section instead.</p>
+  <div class="note">
+    <span class="tag">Worth knowing</span>
+    <p>Content pages are stored in the app itself, so they still open when the phone has no signal. Web links do not.</p>
   </div>
 </section>
 
 <!-- ============ ADD A PHONE NUMBER ============ -->
 <section class="panel" id="p-phone" role="tabpanel" aria-labelledby="t-phone" tabindex="-1" hidden>
   <h2>How to add a phone number</h2>
-  <p class="lead">One tap and the phone starts dialling.</p>
+  <p class="lead">A button that starts dialling when tapped.</p>
 
   <ol class="steps">
-    <li>Add a button in the right list, usually Emergency Contacts.</li>
-    <li><strong>Label it with the action and who answers.</strong> <code>Call Security Services</code>, not <code>Security</code>. The word "Call" tells someone exactly what the tap will do.</li>
-    <li>Choose the option that <strong>places a call</strong> <span class="fill">check the wording</span>.</li>
-    <li><strong>Type the number with no spaces, dashes or brackets, and put the country code on the front:</strong>
+    <li>Add a button in the list where you want it.</li>
+    <li>Type the label, for example <code>Call Security Services</code>.</li>
+    <li>Choose the option that places a call <span class="fill">check the wording</span>.</li>
+    <li>Type the number with no spaces, dashes or brackets, and with the country code on the front:
       <ul>
-        <li>Right: <code>+17805550100</code></li>
-        <li>Wrong: <code>780-555-0100</code></li>
-        <li>Wrong: <code>(780) 555 0100</code></li>
+        <li>Right: <code>+17804975555</code></li>
+        <li>Wrong: <code>780-497-5555</code></li>
+        <li>Wrong: <code>(780) 497 5555</code></li>
       </ul>
-      Punctuation and a missing country code are the usual reason a call button does nothing at all.
+      Punctuation and a missing country code are the usual reason a call button does nothing.
     </li>
-    <li>If the number needs an extension, try a comma pause: <code>+17805550100,,412</code>. If the box will not accept it, put the extension in the button label instead so people can dial it themselves.</li>
+    <li>For an extension, try a comma pause: <code>+17804975555,,412</code>. If the box will not accept it, put the extension in the button label instead.</li>
     <li>Click <span class="ui">Save Properties</span>.</li>
-    <li>Publish, then <strong>actually place the call from a real phone</strong> and confirm the right desk picks up. Do not skip this. A phone button is the single most important kind in the app.</li>
+    <li>Publish, then place the call from a phone to confirm it connects.</li>
   </ol>
-
-  <div class="note verify">
-    <span class="tag">Every three months</span>
-    <p>Dial every number in the app, by hand, once a quarter. Numbers change and nobody tells you. A dead emergency number is worse than no number, because the person stops looking for another way to get help.</p>
-  </div>
 </section>
 
 <!-- ============ ADD AN EMAIL ============ -->
 <section class="panel" id="p-email" role="tabpanel" aria-labelledby="t-email" tabindex="-1" hidden>
   <h2>How to add an email</h2>
-  <p class="lead">One tap opens a new email, already addressed.</p>
+  <p class="lead">A button that opens a new email, already addressed.</p>
 
   <ol class="steps">
-    <li>Add a button in the right list.</li>
-    <li>Label it with the action: <code>Email the Wellness Team</code>.</li>
-    <li>Choose the option that <strong>sends an email</strong> <span class="fill">check the wording</span>.</li>
-    <li><strong>Use a monitored shared inbox, never one person's address.</strong> People change roles and leave. The button stays.</li>
-    <li>If there is a subject line box, fill it in with something that helps the receiving team sort it, like <code>App enquiry: Wellness</code>. If there is a message body box, leave it empty or add a short prompt about what to include.</li>
+    <li>Add a button in the list where you want it.</li>
+    <li>Type the label, for example <code>Email the Wellness Team</code>.</li>
+    <li>Choose the option that sends an email <span class="fill">check the wording</span>.</li>
+    <li>Type the destination address.</li>
+    <li>If there is a subject line box, fill it in. If there is a message body box, you can leave it empty or add starting text.</li>
     <li>Click <span class="ui">Save Properties</span>.</li>
-    <li>Publish, then send a real test email from a phone and confirm it lands in the shared inbox. Warn the receiving team first so they do not treat it as a real request.</li>
+    <li>Publish, then send a test email from a phone and confirm it arrives.</li>
   </ol>
-
-  <div class="note stop">
-    <span class="tag">Never</span>
-    <p>Do not use an email button for anything urgent, or for anything that could be a disclosure. Nobody is watching an inbox at 2am. Urgent goes to a phone button, or to the app's built-in reporting feature, which routes and escalates properly.</p>
-  </div>
 </section>
 
 <!-- ============ ADD A WEB LINK ============ -->
 <section class="panel" id="p-link" role="tabpanel" aria-labelledby="t-link" tabindex="-1" hidden>
   <h2>How to add a web link</h2>
-  <p class="lead">Send someone to a page on the university website.</p>
+  <p class="lead">A button that opens a web page.</p>
 
   <ol class="steps">
-    <li><strong>Open the page in a browser first</strong> and copy the address out of the address bar. Never type it from memory. Typos here are the most common broken button in any app.</li>
-    <li>Add a button in the right list and label it for where it goes.</li>
-    <li>Choose the option that <strong>opens a link</strong> <span class="fill">check the wording</span>.</li>
+    <li>Open the page in a browser and copy the address out of the address bar. Typing it from memory is the most common cause of a broken link.</li>
+    <li>Add a button in the list where you want it and type the label.</li>
+    <li>Choose the option that opens a link <span class="fill">check the wording</span>.</li>
     <li>Paste the full address, including the <code>https://</code> at the front.</li>
-    <li>If you are offered a choice between opening inside the app or in the phone's browser: inside the app for short reference pages, in the browser for anything with a login or a form to fill in.</li>
+    <li>If you are offered a choice between opening inside the app or in the phone's browser, pick one. Pages with a login or a form usually work better in the browser.</li>
     <li>Click <span class="ui">Save Properties</span>.</li>
-    <li>Publish, then tap it on a real phone. The page must load and be readable at phone width. A desktop-only page is not worth linking to.</li>
+    <li>Publish, then tap it on a phone and confirm the page loads and reads properly at phone width.</li>
   </ol>
 
-  <div class="note stop">
-    <span class="tag">Never</span>
-    <p>Never put life-safety information behind a web link. Web links need a working signal, and a signal is exactly what you lose in the situations this app exists for. Critical procedures go on content pages.</p>
-  </div>
-
-  <div class="note verify">
-    <span class="tag">Every three months</span>
-    <p>Tap every web link in the app once a quarter. Links break whenever the website team reorganises, and they will not think to tell you.</p>
+  <div class="note">
+    <span class="tag">Worth knowing</span>
+    <p>A web link needs a working signal. It will not open when the phone is offline.</p>
   </div>
 </section>
 
 <!-- ============ LINK INSIDE THE APP ============ -->
 <section class="panel" id="p-jump" role="tabpanel" aria-labelledby="t-jump" tabindex="-1" hidden>
   <h2>How to link to another spot in the app</h2>
-  <p class="lead">Shortcuts and groupings, without making a second copy of anything.</p>
+  <p class="lead">Two ways: a button that opens a list, and a shortcut to something that already exists.</p>
 
-  <h3>The normal way: a button that opens a list</h3>
+  <h3>A button that opens a list</h3>
   <ol class="steps">
     <li>Add a button where you want the doorway to be.</li>
-    <li>Choose the option that <strong>opens a submenu or folder</strong> <span class="fill">check the wording</span>.</li>
+    <li>Choose the option that opens a submenu or folder <span class="fill">check the wording</span>.</li>
     <li>Click <span class="ui">Save Properties</span>. You now have an empty list.</li>
     <li>With that button still selected in the tree, add the buttons that belong inside it. They appear underneath it, indented.</li>
-    <li>Save, publish, test by tapping through from the home screen.</li>
+    <li>Save, publish, then tap through from the home screen to test.</li>
   </ol>
 
   <h3>A shortcut to something that already exists</h3>
   <ol class="steps">
     <li>Add a button where you want the shortcut.</li>
     <li>Look in the Properties panel for an option that points at an existing item or internal page <span class="fill">check the wording</span>.</li>
-    <li>If it is there, use it and pick the destination. One page, two doorways, and you only ever have to update it once.</li>
-    <li><strong>If there is no such option, do not solve it by copying the page.</strong> Instead, move the page to whichever spot is more useful, and in the other spot put a short content page that says where to find it.</li>
-    <li>Save, publish, then test by tapping through from both directions.</li>
+    <li>If it is there, choose it and pick the destination. That gives you one page reachable from two places, so you only update it once.</li>
+    <li>If there is no such option, the only alternative is a second copy of the page, which then has to be updated in both places every time it changes.</li>
+    <li>Save, publish, then tap through from both directions to test.</li>
   </ol>
-
-  <div class="note stop">
-    <span class="tag">Never</span>
-    <p>Never duplicate life-safety content to save someone a tap. Two copies of the same emergency procedure will drift apart. This is the quietest way a safety app becomes wrong.</p>
-  </div>
-
-  <div class="note ok">
-    <span class="tag">Rule of thumb</span>
-    <p>Two levels below the home screen is the limit. If you find yourself building a third, the structure is wrong. Move things up rather than burying them deeper.</p>
-  </div>
 </section>
 
 <!-- ============ ADD A PICTURE ============ -->
 <section class="panel" id="p-image" role="tabpanel" aria-labelledby="t-image" tabindex="-1" hidden>
   <h2>How to add a picture</h2>
-  <p class="lead">Maps, floor plans, diagrams and video.</p>
+  <p class="lead">Images and video inside a page.</p>
 
   <ol class="steps">
-    <li><strong>Resize the file before you upload it.</strong> Around 1000 pixels wide is plenty. A full size photo straight off a camera or phone makes the app slow to open, and slow is a failure in an emergency.</li>
+    <li>Resize the file before uploading. Around 1000 pixels wide is plenty. Full size photos straight off a camera or phone make the page slow to load.</li>
     <li>Click the button whose page you are adding to, and open the content editor.</li>
     <li>Use the image or media control to upload the file.</li>
-    <li><strong>Add alternative text</strong> describing what the image shows, so the app works for someone using a screen reader.</li>
+    <li>Add alternative text describing what the image shows, so it works for anyone using a screen reader.</li>
     <li>Click <span class="ui">Save Properties</span>.</li>
-    <li>Check it in the app preview, then on a real phone. Floor plans and maps especially need a pinch to zoom test: if it cannot be zoomed and read, it is decoration, not information.</li>
+    <li>Check it in the app preview, then on a phone. For maps and floor plans, check that pinch to zoom works and the labels stay readable.</li>
     <li>Publish and test.</li>
   </ol>
 
-  <div class="note stop">
-    <span class="tag">Never</span>
-    <p>Never put safety-critical instructions in a video only. Video streams from the internet, so it will not play with no signal. Write the steps out as text as well, every time.</p>
+  <div class="note">
+    <span class="tag">Worth knowing</span>
+    <p>Video streams from the internet, so it will not play when the phone is offline. Uploaded images are stored in the app and will still show.</p>
   </div>
 </section>
 
 <!-- ============ MOVE HIDE DELETE ============ -->
 <section class="panel" id="p-move" role="tabpanel" aria-labelledby="t-move" tabindex="-1" hidden>
   <h2>How to move, hide or delete a button</h2>
-  <p class="lead">Tidying up, seasonal content, and getting rid of things properly.</p>
 
   <h3>Move a button</h3>
   <ol class="steps">
     <li>In the menu tree, drag the button up or down into position, or use the ordering control in Properties <span class="fill">check how yours works</span>.</li>
-    <li><strong>Order by urgency first, then by how often it is used.</strong> Emergency actions at the top, information at the bottom.</li>
-    <li>Do not order alphabetically. Nobody in trouble reads alphabetically.</li>
-    <li>Click <span class="ui">Save Properties</span>, check the preview, publish and test.</li>
+    <li>Click <span class="ui">Save Properties</span>.</li>
+    <li>Check the order in the app preview, then publish and test.</li>
   </ol>
 
   <h3>Hide a button</h3>
   <ol class="steps">
     <li>Click the button, then switch its visibility off <span class="fill">check the wording</span>.</li>
-    <li>It disappears from the app but stays in your dashboard, so you can bring it back in one click.</li>
-    <li>This is the right answer for anything seasonal: orientation week, exam period, winter weather guidance, a construction detour.</li>
-    <li>Click <span class="ui">Save Properties</span>, publish, and confirm on a phone that it is gone.</li>
+    <li>It disappears from the app but stays in your dashboard, so switching it back on takes one click.</li>
+    <li>Click <span class="ui">Save Properties</span>, publish, then confirm on a phone that it is gone.</li>
   </ol>
 
   <h3>Delete a button</h3>
   <ol class="steps">
-    <li><strong>Only delete if the content is wrong or obsolete and is never coming back.</strong> Otherwise hide it.</li>
-    <li><strong>Copy the page text somewhere safe first.</strong> Deleting is not reversible, and getting content back means a support ticket.</li>
-    <li>Delete it, click <span class="ui">Save Properties</span>, publish.</li>
-    <li>Check the whole surrounding list on a phone afterwards, in case anything else shifted.</li>
+    <li>Copy the page text somewhere else first. Deleting is not reversible, and getting content back means a support ticket.</li>
+    <li>Delete the button, then click <span class="ui">Save Properties</span>.</li>
+    <li>Publish, then check the surrounding list on a phone in case anything else shifted.</li>
   </ol>
 </section>
 
 <!-- ============ PUBLISH AND TEST ============ -->
 <section class="panel" id="p-publish" role="tabpanel" aria-labelledby="t-publish" tabindex="-1" hidden>
   <h2>How to publish and test</h2>
-  <p class="lead">The last step of every job on this site. It takes about three minutes.</p>
+  <p class="lead">The last step of every job on this site.</p>
 
   <h3>Publish</h3>
   <ol class="steps">
     <li>Check that everything you changed has been saved with <span class="ui">Save Properties</span>.</li>
-    <li>Walk the whole branch in the app preview one last time, the way a user would rather than the way you built it.</li>
-    <li>Publish the change <span class="fill">check the wording and where the control sits</span>. It reaches phones in real time. There is no App Store submission, no review period, no waiting on IT.</li>
-    <li>Test it straight away, using the checklist below.</li>
+    <li>Walk through the section you changed in the app preview.</li>
+    <li>Publish the change <span class="fill">check the wording and where the control sits</span>. It reaches phones in real time.</li>
+    <li>Test it using the checklist below.</li>
   </ol>
 
-  <h3>Test on a real phone</h3>
+  <h3>Test on a phone</h3>
   <ul class="check">
     <li>Force close the app and reopen it, so it pulls the fresh content.</li>
-    <li>Find your change by navigating from the home screen, the way a user would, not by memory of where you put it.</li>
+    <li>Find your change by navigating from the home screen.</li>
     <li>The wording fits on one line and is not cut off.</li>
-    <li>Tap it. It does the thing it says it does.</li>
-    <li>Phone buttons: place the call and confirm the right desk answers.</li>
-    <li>Email buttons: send a real test and confirm it lands in the shared inbox.</li>
-    <li>Web buttons: the page loads and is readable at phone width.</li>
-    <li>Pages: read the whole thing on the phone. No wall of text, no broken images.</li>
-    <li>Check on both an iPhone and an Android phone. They lay things out differently.</li>
-    <li>Turn on airplane mode and confirm your emergency procedure pages still open.</li>
-    <li>Nothing else moved or vanished while you were in there.</li>
+    <li>Tap it, and it does what it says.</li>
+    <li>Phone buttons: place the call and confirm it connects.</li>
+    <li>Email buttons: send a test and confirm it arrives.</li>
+    <li>Web buttons: the page loads and reads properly at phone width.</li>
+    <li>Pages: read the whole page on the phone, checking for broken images.</li>
+    <li>Check on both an iPhone and an Android phone, since they lay things out differently.</li>
+    <li>Turn on airplane mode and check that your content pages still open.</li>
+    <li>Nothing else moved or disappeared.</li>
   </ul>
-
-  <div class="note rule">
-    <span class="tag">Worth doing</span>
-    <p>Keep one iPhone and one Android in the office with the app installed. Testing should never be blocked by not having the right handset in the room.</p>
-  </div>
 
   <h3>How to undo something</h3>
   <ol class="steps">
-    <li>Change the field back to what it was and publish again. Publishing a correction is faster and safer than hunting for a restore button.</li>
+    <li>Change the field back to what it was and publish again.</li>
     <li>For something you cannot fix by editing, such as a deleted page you need back, raise a ticket on the dashboard's <span class="ui">Support</span> page.</li>
   </ol>
 </section>
@@ -751,11 +658,11 @@ footer p{max-width:70ch; margin:0 0 8px}
 <!-- ============ IF IT GOES WRONG ============ -->
 <section class="panel" id="p-fix" role="tabpanel" aria-labelledby="t-fix" tabindex="-1" hidden>
   <h2>If it goes wrong</h2>
-  <p class="lead">The seven things that actually happen, and what fixes them.</p>
+  <p class="lead">The common problems and what fixes them.</p>
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th>What you are seeing</th><th>Almost always because</th><th>Do this</th></tr></thead>
+      <thead><tr><th>What you are seeing</th><th>Usually because</th><th>Do this</th></tr></thead>
       <tbody>
         <tr>
           <td>Change is not showing on the phone</td>
@@ -765,12 +672,12 @@ footer p{max-width:70ch; margin:0 0 8px}
         <tr>
           <td>Change is not showing in the preview</td>
           <td>It was not saved</td>
-          <td>Click <span class="ui">Save Properties</span>. The preview only refreshes when you save, or when you click a different button in the tree.</td>
+          <td>Click <span class="ui">Save Properties</span>. The preview refreshes when you save, or when you click a different button in the tree.</td>
         </tr>
         <tr>
           <td>Call button does nothing</td>
           <td>The number has punctuation in it</td>
-          <td>Strip out spaces, dashes and brackets, and put <code>+1</code> on the front.</td>
+          <td>Remove spaces, dashes and brackets, and put <code>+1</code> on the front.</td>
         </tr>
         <tr>
           <td>Web link opens a blank page</td>
@@ -780,12 +687,12 @@ footer p{max-width:70ch; margin:0 0 8px}
         <tr>
           <td>Page looks broken or oddly spaced</td>
           <td>Text was pasted straight from Word</td>
-          <td>Clear the formatting, paste it again as plain text, then format it inside the editor.</td>
+          <td>Clear the formatting, paste again as plain text, then format inside the editor.</td>
         </tr>
         <tr>
           <td>Label is cut off on some phones</td>
           <td>It is too long</td>
-          <td>Shorten it to three words.</td>
+          <td>Shorten it and check the preview again.</td>
         </tr>
         <tr>
           <td>You cannot find a setting described here</td>
@@ -796,11 +703,11 @@ footer p{max-width:70ch; margin:0 0 8px}
     </table>
   </div>
 
-  <h3>Where to get real help</h3>
+  <h3>Where to get more help</h3>
   <ul>
-    <li><strong>The dashboard's own Support page.</strong> Inside your AppArmor dashboard. It has video training on both the app and the dashboard, release notes covering platform updates every week or two, and a form for raising a ticket. Check the release notes before assuming something is broken, because options do move.</li>
+    <li><strong>The dashboard's Support page.</strong> Inside the AppArmor dashboard. It has video training on the app and the dashboard, release notes covering platform updates every week or two, and a form for raising a ticket.</li>
     <li><strong>A support ticket.</strong> Raised on that same page. Use it for anything you cannot change yourself: the app icon, the app name, turning whole features on, and recovering deleted content.</li>
-    <li><strong>Your app administrator</strong> for logins, permissions and single sign on problems.</li>
+    <li><strong>Your app administrator</strong> for logins, permissions and single sign on.</li>
   </ul>
 </section>
 
